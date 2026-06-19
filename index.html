@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gregorio Pellegrini — Matematico, Risk Manager, Developer. Portfolio personale con progetti, pubblicazioni e CV." />
+  <meta name="keywords" content="Gregorio Pellegrini, matematica, risk management, Generali, sviluppatore app, AI, finanza sostenibile, ESG" />
+  <meta property="og:title" content="Gregorio Pellegrini" />
+  <meta property="og:description" content="Matematico · Risk Manager · Developer" />
+  <meta property="og:type" content="website" />
+  <title>Gregorio Pellegrini</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navigazione principale">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">GP</a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about" data-it="Chi sono" data-en="About">Chi sono</a></li>
+        <li><a href="#experience" data-it="Esperienza" data-en="Experience">Esperienza</a></li>
+        <li><a href="#education" data-it="Formazione" data-en="Education">Formazione</a></li>
+        <li><a href="#projects" data-it="Progetti" data-en="Projects">Progetti</a></li>
+        <li><a href="#publications" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</a></li>
+        <li><a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Seleziona lingua">
+          <button class="lang-btn active" id="btn-it" aria-pressed="true">IT</button>
+          <button class="lang-btn" id="btn-en" aria-pressed="false">EN</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow" data-it="Portfolio &amp; CV" data-en="Portfolio &amp; CV">Portfolio &amp; CV</p>
+          <h1 class="hero-name">Gregorio Pellegrini</h1>
+          <div class="hero-role">
+            <span id="typed-text" class="typed-text" aria-live="polite"></span><span class="cursor" aria-hidden="true"></span>
+          </div>
+          <p class="hero-tagline lang-it">
+            Matematico applicato con passione per la tecnologia. Da oltre dieci anni in Generali Italia nel Risk Management,
+            combino rigore quantitativo, finanza sostenibile e sviluppo software per trasformare dati complessi in decisioni chiare.
+          </p>
+          <p class="hero-tagline lang-en" style="display:none">
+            Applied mathematician with a passion for technology. Over ten years in Risk Management at Generali Italia,
+            combining quantitative rigour, sustainable finance, and software development to turn complex data into clear decisions.
+          </p>
+          <div class="hero-cta">
+            <a href="main.tex" class="btn btn-primary" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span data-it="Scarica CV" data-en="Download CV">Scarica CV</span>
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <span data-it="Vedi Progetti" data-en="View Projects">Vedi Progetti</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="avatar-ring">
+            <div class="avatar-inner" id="avatar-inner">
+              <img src="assets/profile.jpg" alt="Gregorio Pellegrini"
+                   onerror="this.style.display='none';document.getElementById('avatar-initials').style.display='flex';" />
+              <span class="avatar-initials" id="avatar-initials" style="display:none">GP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Chi sono" data-en="About me">Chi sono</h2>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <div class="lang-it">
+            <p>
+              Sono un <strong>matematico</strong> che ha trovato la sua vocazione nel punto di incontro tra numeri e realtà.
+              Dopo la laurea magistrale con lode a Verona e un Executive Master a Trieste, da oltre dieci anni lavoro in
+              <strong>Generali Italia</strong> nel Risk Management: mi occupo del Solvency Capital Requirement e costruisco
+              strumenti di analisi con R e R-Shiny per rendere leggibili i movimenti di capitale di uno dei principali
+              gruppi assicurativi europei.
+            </p>
+            <p>
+              La matematica per me non si ferma in ufficio. Ho pubblicato articoli scientifici sulla
+              <strong>Polynomial Chaos Expansion</strong>, tenuto seminari come speaker invitato nelle università,
+              e sviluppato <strong>app di intelligenza artificiale</strong> su HuggingFace — perché la tecnologia
+              deve risolvere problemi concreti.
+            </p>
+            <p>
+              Quando non sono davanti a uno schermo, mi trovo su un sentiero di montagna con lo zaino in spalla
+              o in sella per percorsi di lunga distanza. Ho pedalato da <strong>Verona a Resia</strong> e da
+              <strong>Fortezza a Venezia</strong>: chilometri che insegnano la stessa cosa della matematica —
+              che la strada più lunga, affrontata con metodo, porta sempre a destinazione.
+            </p>
+          </div>
+          <div class="lang-en" style="display:none">
+            <p>
+              I am a <strong>mathematician</strong> who found his calling at the intersection of numbers and reality.
+              After graduating with honours in Verona and completing an Executive Master in Trieste, I have spent over
+              ten years at <strong>Generali Italia</strong> in Risk Management: computing Solvency Capital Requirement
+              and building analytical tools with R and R-Shiny to make the capital movements of one of Europe's leading
+              insurance groups legible and actionable.
+            </p>
+            <p>
+              Mathematics doesn't stop at the office. I have published academic papers on
+              <strong>Polynomial Chaos Expansion</strong>, given invited talks at universities,
+              and developed <strong>AI applications</strong> on HuggingFace — because technology
+              should solve concrete problems.
+            </p>
+            <p>
+              When I'm not in front of a screen, I'm on a mountain trail with a backpack or on a long-distance
+              cycling route. I have cycled from <strong>Verona to Resia</strong> and from
+              <strong>Fortezza to Venice</strong>: kilometres that teach the same lesson as mathematics —
+              that the longest road, tackled with method, always leads to its destination.
+            </p>
+          </div>
+        </div>
+        <div class="passions fade-in">
+          <div class="passion-item">
+            <div class="passion-emoji">📐</div>
+            <h4 data-it="Matematica Applicata" data-en="Applied Mathematics">Matematica Applicata</h4>
+            <p class="lang-it">Dalla PCE ai modelli stocastici, la matematica è la lente con cui leggo il mondo.</p>
+            <p class="lang-en" style="display:none">From PCE to stochastic models, mathematics is the lens through which I read the world.</p>
+          </div>
+          <div class="passion-item">
+            <div class="passion-emoji">🌿</div>
+            <h4 data-it="Finanza Sostenibile &amp; ESG" data-en="Sustainable Finance &amp; ESG">Finanza Sostenibile &amp; ESG</h4>
+            <p class="lang-it">Coniugare redditività e responsabilità attraverso tassonomia EU, rischi climatici e rating ESG.</p>
+            <p class="lang-en" style="display:none">Bridging profitability and responsibility through EU taxonomy, climate risks, and ESG ratings.</p>
+          </div>
+          <div class="passion-item">
+            <div class="passion-emoji">🤖</div>
+            <h4 data-it="Intelligenza Artificiale" data-en="Artificial Intelligence">Intelligenza Artificiale</h4>
+            <p class="lang-it">Sviluppo app AI per risolvere problemi concreti, da classificazione immagini a strumenti di analisi dati.</p>
+            <p class="lang-en" style="display:none">Building AI apps to solve concrete problems, from image classification to data analysis tools.</p>
+          </div>
+          <div class="passion-item">
+            <div class="passion-emoji">🎓</div>
+            <h4 data-it="Divulgazione Scientifica" data-en="Science Communication">Divulgazione Scientifica</h4>
+            <p class="lang-it">Raccontare la matematica e la finanza a studenti e professionisti con chiarezza e passione.</p>
+            <p class="lang-en" style="display:none">Communicating mathematics and finance to students and professionals with clarity and passion.</p>
+          </div>
+          <div class="passion-item">
+            <div class="passion-emoji">🏔️</div>
+            <h4 data-it="Montagna &amp; Natura" data-en="Mountains &amp; Nature">Montagna &amp; Natura</h4>
+            <p class="lang-it">Escursioni zaino in spalla tra le Dolomiti e le Alpi. La montagna come luogo di silenzio, prospettiva e rispetto per l'ambiente.</p>
+            <p class="lang-en" style="display:none">Backpacking through the Dolomites and the Alps. The mountains as a place of silence, perspective, and respect for the environment.</p>
+          </div>
+          <div class="passion-item">
+            <div class="passion-emoji">🚴</div>
+            <h4 data-it="Ciclismo di Lunga Distanza" data-en="Long-Distance Cycling">Ciclismo di Lunga Distanza</h4>
+            <p class="lang-it">Verona → Resia e Fortezza → Venezia in bici. Pedalare come metafora del metodo: un passo dopo l'altro, ogni salita ha una discesa.</p>
+            <p class="lang-en" style="display:none">Verona → Resia and Fortezza → Venice by bike. Cycling as a metaphor for method: one pedal stroke at a time, every climb has a descent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section" style="background: var(--surface)">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Esperienza Professionale" data-en="Professional Experience">Esperienza Professionale</h2>
+      <div class="timeline fade-in">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date" data-it="Novembre 2015 — Presente" data-en="November 2015 — Present">Novembre 2015 — Presente</div>
+          <div class="timeline-title">Generali Italia S.p.A.</div>
+          <div class="timeline-subtitle" data-it="Risk Management · Financial &amp; Credit Risk" data-en="Risk Management · Financial &amp; Credit Risk">Risk Management · Financial &amp; Credit Risk</div>
+          <div class="timeline-body lang-it">
+            <ul>
+              <li><strong>SCR:</strong> calcolo del Solvency Capital Requirement per valutazioni trimestrali, piano strategico e annuali; stress test e analisi di sensitività.</li>
+              <li><strong>Supporto ai comitati:</strong> predisposizione di materiali a supporto per Comitati Rischi, Consiglio di Amministrazione e stakeholder esterni.</li>
+              <li><strong>Data Engineering &amp; Dashboard:</strong> progettazione di infrastrutture dati e applicazioni in R, R-Shiny e Tibco Spotfire per l'analisi del profilo di rischio e dei movimenti di capitale.</li>
+              <li><strong>Sviluppo:</strong> utilizzo di VS Code e GitHub Copilot per accelerare lo sviluppo e il refactoring di script R e SQL.</li>
+            </ul>
+          </div>
+          <div class="timeline-body lang-en" style="display:none">
+            <ul>
+              <li><strong>SCR:</strong> Solvency Capital Requirement computation for quarterly, strategic and annual assessments; stress tests and sensitivity analyses.</li>
+              <li><strong>Committee support:</strong> preparation of materials for Risk Committees, Board of Directors, and external stakeholders.</li>
+              <li><strong>Data Engineering &amp; Dashboards:</strong> design of data infrastructure and applications in R, R-Shiny, and Tibco Spotfire for risk profile and capital movement analysis.</li>
+              <li><strong>Development:</strong> VS Code and GitHub Copilot to accelerate development and refactoring of R and SQL scripts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--accent2); box-shadow: 0 0 12px rgba(124,58,237,0.6);"></div>
+          <div class="timeline-date" data-it="Agosto 2014 — Gennaio 2015" data-en="August 2014 — January 2015">Agosto 2014 — Gennaio 2015</div>
+          <div class="timeline-title">EnginSoft S.p.A.</div>
+          <div class="timeline-subtitle" data-it="Stage di ricerca · Ufficio Padova" data-en="Research Internship · Padua Office">Stage di ricerca · Ufficio Padova</div>
+          <div class="timeline-body lang-it">
+            Studio e applicazione della tecnica <em>Polynomial Chaos Expansion</em> tramite il toolbox NISP (Non-Intrusive Spectral Projection) su Scilab.
+            Collaborazione con Manolo Venturin Ph.D. Risultati pubblicati in riviste internazionali e presentati alla CAE Conference 2015.
+          </div>
+          <div class="timeline-body lang-en" style="display:none">
+            Study and application of the <em>Polynomial Chaos Expansion</em> technique via the NISP (Non-Intrusive Spectral Projection) toolbox on Scilab.
+            Collaboration with Manolo Venturin Ph.D. Results published in international journals and presented at CAE Conference 2015.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Formazione" data-en="Education">Formazione</h2>
+      <div class="timeline fade-in">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 — 2023</div>
+          <div class="timeline-title">
+            <span data-it="Executive Master in Insurance and Finance" data-en="Executive Master in Insurance and Finance">Executive Master in Insurance and Finance</span>
+            <span class="badge-grade" data-it="con merito" data-en="with merit">con merito</span>
+          </div>
+          <div class="timeline-subtitle">MIB Trieste School of Management</div>
+          <div class="timeline-body lang-it">
+            Tesi: <em>Finanza Sostenibile</em> — Analisi della normativa (Green Deal EU, NFDR, CSDR, Taxonomy EU) e dei modelli rating ESG.
+          </div>
+          <div class="timeline-body lang-en" style="display:none">
+            Thesis: <em>Sustainable Finance</em> — Analysis of current regulation (EU Green Deal, NFDR, CSDR, EU Taxonomy) and ESG rating models.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022</div>
+          <div class="timeline-title" data-it="ESG: tra gestione dei rischi e opportunità di business" data-en="ESG: Risk Management and Business Opportunities">ESG: tra gestione dei rischi e opportunità di business</div>
+          <div class="timeline-subtitle" data-it="Università Cattolica del Sacro Cuore" data-en="Università Cattolica del Sacro Cuore">Università Cattolica del Sacro Cuore</div>
+          <div class="timeline-body lang-it">Corso Executive su sviluppo sostenibile e integrazione dei criteri ESG nella gestione del rischio.</div>
+          <div class="timeline-body lang-en" style="display:none">Executive course on sustainable development and ESG criteria integration in risk management.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2012 — 2015</div>
+          <div class="timeline-title">
+            <span data-it="Laurea Magistrale in Matematica" data-en="Master's Degree in Mathematics">Laurea Magistrale in Matematica</span>
+            <span class="badge-grade">110/110 s.c.l.</span>
+          </div>
+          <div class="timeline-subtitle" data-it="Università degli Studi di Verona · Curriculum Applicativo" data-en="University of Verona · Applied Curriculum">Università degli Studi di Verona · Curriculum Applicativo</div>
+          <div class="timeline-body lang-it">
+            Lezioni, esami e seminari sostenuti in lingua inglese. Tesi: <em>Polynomial Chaos Expansion with applications to PDEs</em>
+            (relatore: prof. Marco Caliari, correlatore: dott. Manolo Venturin).
+          </div>
+          <div class="timeline-body lang-en" style="display:none">
+            Lectures, exams and seminars held in English. Thesis: <em>Polynomial Chaos Expansion with applications to PDEs</em>
+            (supervisor: prof. Marco Caliari, co-supervisor: dr. Manolo Venturin).
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--accent2); box-shadow: 0 0 12px rgba(124,58,237,0.6);"></div>
+          <div class="timeline-date">2009 — 2012</div>
+          <div class="timeline-title">
+            <span data-it="Laurea Triennale in Matematica Applicata" data-en="Bachelor's Degree in Applied Mathematics">Laurea Triennale in Matematica Applicata</span>
+            <span class="badge-grade">107/110</span>
+          </div>
+          <div class="timeline-subtitle" data-it="Università degli Studi di Verona" data-en="University of Verona">Università degli Studi di Verona</div>
+          <div class="timeline-body lang-it">
+            Tesi: <em>Il teorema degli zeri di Hilbert</em> (relatrice: Prof.ssa Lidia Angeleri).
+          </div>
+          <div class="timeline-body lang-en" style="display:none">
+            Thesis: <em>Hilbert's Nullstellensatz</em> (supervisor: Prof. Lidia Angeleri).
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section" style="background: var(--surface)">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Competenze Tecniche" data-en="Technical Skills">Competenze Tecniche</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <h4 data-it="Quantitativo &amp; Finanziario" data-en="Quantitative &amp; Finance">Quantitativo &amp; Finanziario</h4>
+          <div class="skill-tags">
+            <span class="tag">Risk Management</span>
+            <span class="tag">SCR / Solvency II</span>
+            <span class="tag">Stress Test</span>
+            <span class="tag">ESG / Finanza Sostenibile</span>
+            <span class="tag">Polynomial Chaos Expansion</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h4 data-it="Linguaggi &amp; Data Science" data-en="Languages &amp; Data Science">Linguaggi &amp; Data Science</h4>
+          <div class="skill-tags">
+            <span class="tag">R</span>
+            <span class="tag">R-Shiny</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h4 data-it="AI &amp; App Development" data-en="AI &amp; App Development">AI &amp; App Development</h4>
+          <div class="skill-tags">
+            <span class="tag">HuggingFace</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">GitHub Copilot</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <h4 data-it="Software &amp; Strumenti" data-en="Software &amp; Tools">Software &amp; Strumenti</h4>
+          <div class="skill-tags">
+            <span class="tag">Tibco Spotfire</span>
+            <span class="tag">Scilab</span>
+            <span class="tag">Matlab</span>
+            <span class="tag">FreeFem++</span>
+            <span class="tag">LaTeX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Progetti" data-en="Projects">Progetti</h2>
+      <div class="projects-grid">
+
+        <!-- fiel-explorer -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon">⛽</div>
+            <span class="project-badge badge-hf">🤗 HuggingFace</span>
+          </div>
+          <div class="project-title">fuel-explorer</div>
+          <div class="project-desc lang-it">
+            Applicazione per l'esplorazione e l'analisi dei dati sui carburanti, pubblicata su HuggingFace Spaces.
+            Sviluppata con un approccio pragmatico per rendere accessibili e navigabili dataset complessi.
+          </div>
+          <div class="project-desc lang-en" style="display:none">
+            An application for exploring and analysing fuel data, published on HuggingFace Spaces.
+            Built with a pragmatic approach to make complex datasets accessible and navigable.
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tag">HuggingFace</span>
+            </div>
+            <a href="https://huggingface.co/spaces/gr93vr/fuel-explorer" class="project-link" target="_blank" rel="noopener">
+              <span data-it="Vedi repo" data-en="View repo">Vedi repo</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- App Rifiuti / Waste AI -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon" style="background: rgba(255,170,0,0.1); border-color: rgba(255,170,0,0.2);">♻️</div>
+            <span class="project-badge badge-hf">🤗 HuggingFace</span>
+          </div>
+          <div class="project-title lang-it">Classificatore di Rifiuti AI</div>
+          <div class="project-title lang-en" style="display:none">AI Waste Classifier</div>
+          <div class="project-desc lang-it">
+            Applicazione di intelligenza artificiale per la classificazione e il riconoscimento dei rifiuti tramite analisi di immagini.
+            Supporta la corretta differenziazione dei rifiuti domestici, contribuendo a una gestione più sostenibile delle risorse.
+            Pubblicata su HuggingFace Spaces.
+          </div>
+          <div class="project-desc lang-en" style="display:none">
+            An artificial intelligence application for waste classification and recognition through image analysis.
+            Supports correct household waste sorting, contributing to more sustainable resource management.
+            Published on HuggingFace Spaces.
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag" data-it="Classificazione Immagini" data-en="Image Classification">Classificazione Immagini</span>
+              <span class="tag">HuggingFace</span>
+            </div>
+            <a href="https://huggingface.co/spaces/gr93vr/rifiuti-verona" class="project-link" target="_blank" rel="noopener">
+              <span data-it="Apri App" data-en="Open App">Apri App</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Future project: University collaboration -->
+        <div class="project-card coming-soon fade-in">
+          <div class="project-header">
+            <div class="project-icon" style="background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.25);">🎓</div>
+            <span class="project-badge badge-soon" data-it="In arrivo" data-en="Coming soon">In arrivo</span>
+          </div>
+          <div class="project-title lang-it">Collaborazione con l'Università</div>
+          <div class="project-title lang-en" style="display:none">University Research Collaboration</div>
+          <div class="project-desc lang-it">
+            Progetto in fase di sviluppo in collaborazione con l'Università degli Studi di Verona.
+            L'obiettivo è coniugare l'esperienza professionale nel Risk Management con la ricerca accademica
+            in matematica applicata, finanza sostenibile e metodi quantitativi avanzati.
+            Nuovi strumenti e pubblicazioni in arrivo.
+          </div>
+          <div class="project-desc lang-en" style="display:none">
+            Project in development in collaboration with the University of Verona.
+            The goal is to bridge professional expertise in Risk Management with academic research
+            in applied mathematics, sustainable finance, and advanced quantitative methods.
+            New tools and publications forthcoming.
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tag" data-it="Ricerca" data-en="Research">Ricerca</span>
+              <span class="tag">Univ. Verona</span>
+            </div>
+            <span class="project-link-soon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-it="Stay tuned" data-en="Stay tuned">Stay tuned</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="section" style="background: var(--surface)">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</h2>
+      <div class="pub-list">
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">1</div>
+          <div class="pub-content">
+            <div class="pub-authors">S. Albeverio, F. Cordoni, L. Di Persio, G. Pellegrini</div>
+            <div class="pub-title">Asymptotic expansion for some local volatility models arising in finance</div>
+            <div class="pub-venue">Decisions in Economics and Finance (DEF) · Vol. 52 · 2019</div>
+            <a href="https://link.springer.com/article/10.1007%2Fs10203-019-00247-w" class="pub-link" target="_blank" rel="noopener">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Springer
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">2</div>
+          <div class="pub-content">
+            <div class="pub-authors">L. Di Persio, M. Bonollo, G. Pellegrini</div>
+            <div class="pub-title">Polynomial Chaos Expansion approach to interest rate models</div>
+            <div class="pub-venue">Journal of Probability and Statistics · Hindawi · 2015</div>
+            <a href="http://www.hindawi.com/journals/jps/" class="pub-link" target="_blank" rel="noopener">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Hindawi
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">3</div>
+          <div class="pub-content">
+            <div class="pub-authors">L. Di Persio, M. Bonollo, G. Pellegrini</div>
+            <div class="pub-title">A computational spectral approximation to interest rate models</div>
+            <div class="pub-venue">Preprint · SSRN &amp; arXiv · 2015</div>
+            <div style="display:flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="http://ssrn.com/abstract=2635012" class="pub-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                SSRN
+              </a>
+              <a href="http://arxiv.org/abs/1508.06236" class="pub-link" target="_blank" rel="noopener">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                arXiv
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">4</div>
+          <div class="pub-content">
+            <div class="pub-authors">G. Pellegrini</div>
+            <div class="pub-title">Uncertainty in simulations: Polynomial Chaos Expansion</div>
+            <div class="pub-venue">EnginSoft Newsletter · Simulation Based Engineering &amp; Sciences · 2015</div>
+            <a href="http://www.enginsoft.it/newsletter/files/newsletter15-2.pdf" class="pub-link" target="_blank" rel="noopener">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">5</div>
+          <div class="pub-content">
+            <div class="pub-authors">G. Pellegrini</div>
+            <div class="pub-title">A spectral uncertainty quantification method to transoceanic Tsunami propagation</div>
+            <div class="pub-venue" style="display:flex; align-items:center; gap: 0.5rem;">
+              International CAE Conference 2015
+              <span style="background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); border-radius: 20px; padding: 1px 8px; font-size: 0.7rem; font-weight: 700; white-space: nowrap;" data-it="🏆 Poster Award" data-en="🏆 Poster Award">🏆 Poster Award</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">6</div>
+          <div class="pub-content">
+            <div class="pub-authors">G. Pellegrini</div>
+            <div class="pub-title">Scilab for uncertainty in simulations: numerical applications of the Polynomial Chaos Expansion method</div>
+            <div class="pub-venue">International CAE Conference 2015 · Conference paper</div>
+          </div>
+        </div>
+
+        <div class="pub-item fade-in">
+          <div class="pub-number">7</div>
+          <div class="pub-content">
+            <div class="pub-authors">L. Di Persio, M. Bonollo, G. Pellegrini</div>
+            <div class="pub-title">Polynomial Chaos Expansion approach to interest rate models</div>
+            <div class="pub-venue">39th AMASES Annual Meeting · Padova · 2015</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONFERENCES / SPEAKING ===== -->
+  <section id="conferences" class="section">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Speaker &amp; Conferenze" data-en="Speaking &amp; Conferences">Speaker &amp; Conferenze</h2>
+      <div class="conf-list">
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2026</div>
+          <div class="conf-content">
+            <div class="conf-title">
+              <span class="lang-it">Studiare Matematica, Lavorare con la Realtà</span>
+              <span class="lang-en" style="display:none">Studying Mathematics, Working with Reality</span>
+              <span class="conf-role" data-it="Speaker Invitato" data-en="Invited Speaker">Speaker Invitato</span>
+            </div>
+            <div class="conf-subtitle">
+              <span class="lang-it">Seminario divulgativo per studenti del terzo anno di matematica — Università degli Studi di Verona · 29 Aprile 2026</span>
+              <span class="lang-en" style="display:none">Outreach seminar for third-year mathematics students — University of Verona · 29 April 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2024</div>
+          <div class="conf-content">
+            <div class="conf-title">
+              <span class="lang-it">La Finanza Sostenibile: dalla Tassonomia ai Rischi Climatici</span>
+              <span class="lang-en" style="display:none">Sustainable Finance: from Taxonomy to Climate Risks</span>
+              <span class="conf-role" data-it="Speaker Invitato" data-en="Invited Speaker">Speaker Invitato</span>
+            </div>
+            <div class="conf-subtitle">
+              <span class="lang-it">Modulo New Business Models · Executive Master in Insurance and Finance — MIB Trieste School of Management · 10 Maggio 2024</span>
+              <span class="lang-en" style="display:none">New Business Models module · Executive Master in Insurance and Finance — MIB Trieste School of Management · 10 May 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2021</div>
+          <div class="conf-content">
+            <div class="conf-title">
+              <span class="lang-it">Modeling Risk in Insurance and Energy Market</span>
+              <span class="lang-en" style="display:none">Modeling Risk in Insurance and Energy Market</span>
+              <span class="conf-role" data-it="Speaker" data-en="Speaker">Speaker</span>
+            </div>
+            <div class="conf-subtitle">
+              <span class="lang-it">
+                VTM7 · Serie "Veronesi Tutti Math" · Alumni Matematica Verona — Università degli Studi di Verona<br>
+                12 Maggio 2021 · con Silvia Lavagnini (Univ. Oslo)
+              </span>
+              <span class="lang-en" style="display:none">
+                VTM7 · "Veronesi Tutti Math" Series · Alumni Matematica Verona — University of Verona<br>
+                12 May 2021 · with Silvia Lavagnini (Univ. Oslo)
+              </span>
+            </div>
+            <div style="display:flex; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.almathverona.it/seminars/vtm7_risk_insurance_energy_markets/" target="_blank" rel="noopener" class="pub-link">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span data-it="Pagina seminario" data-en="Seminar page">Pagina seminario</span>
+              </a>
+              <a href="https://univr.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1bdbb12e-7178-48d1-95ff-ad2601574884" target="_blank" rel="noopener" class="pub-link">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span data-it="Guarda il video" data-en="Watch recording">Guarda il video</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2018</div>
+          <div class="conf-content">
+            <div class="conf-title">European R Users Meeting (eRum 2018)</div>
+            <div class="conf-subtitle">
+              <span class="lang-it">Conferenza internazionale per sviluppatori R</span>
+              <span class="lang-en" style="display:none">International conference for R developers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2015</div>
+          <div class="conf-content">
+            <div class="conf-title">
+              International CAE Conference 2015
+              <span class="conf-role" data-it="🏆 Poster Award" data-en="🏆 Poster Award">🏆 Poster Award</span>
+            </div>
+            <div class="conf-subtitle">
+              <span class="lang-it">Simulation Based Engineering &amp; Sciences — EnginSoft S.p.A. · Pacengo, Verona</span>
+              <span class="lang-en" style="display:none">Simulation Based Engineering &amp; Sciences — EnginSoft S.p.A. · Pacengo, Verona</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="conf-item fade-in">
+          <div class="conf-year">2015</div>
+          <div class="conf-content">
+            <div class="conf-title">39th AMASES Annual Meeting</div>
+            <div class="conf-subtitle">
+              <span class="lang-it">Matematica per Economia, Finanza e Scienze Sociali · Padova</span>
+              <span class="lang-en" style="display:none">Mathematics for Economics, Finance and Social Sciences · Padova</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section" style="background: var(--surface)">
+    <div class="container">
+      <h2 class="section-title fade-in" data-it="Contatti" data-en="Contact">Contatti</h2>
+      <div class="contact-grid">
+        <div class="fade-in">
+          <p class="lang-it">
+            Sono sempre aperto a nuove collaborazioni, opportunità di ricerca e conversazioni su matematica, finanza e tecnologia.
+            Non esitare a contattarmi.
+          </p>
+          <p class="lang-en" style="display:none">
+            I am always open to new collaborations, research opportunities, and conversations about mathematics, finance, and technology.
+            Feel free to reach out.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:gregorio.pellegrini@gmail.com" class="contact-link">
+              <span class="link-icon">✉️</span>
+              gregorio.pellegrini@gmail.com
+            </a>
+            <!-- Replace with your actual GitHub URL -->
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" class="contact-link" target="_blank" rel="noopener">
+              <span class="link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </span>
+              GitHub
+            </a>
+            <!-- Replace with your actual HuggingFace URL -->
+            <a href="https://huggingface.co/gr93vr" class="contact-link" target="_blank" rel="noopener">
+              <span class="link-icon">🤗</span>
+              HuggingFace
+            </a>
+          </div>
+        </div>
+        <div class="contact-cta fade-in">
+          <div class="contact-cta-icon">🤝</div>
+          <h3 data-it="Lavoriamo insieme" data-en="Let's work together">Lavoriamo insieme</h3>
+          <p class="lang-it">
+            Che tu sia un ricercatore, un professionista del settore finanziario o un appassionato di AI,
+            sono felice di esplorare nuove idee e collaborazioni.
+          </p>
+          <p class="lang-en" style="display:none">
+            Whether you are a researcher, a financial professional, or an AI enthusiast,
+            I'd be happy to explore new ideas and collaborations.
+          </p>
+          <a href="mailto:gregorio.pellegrini@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            <span data-it="Scrivimi" data-en="Get in touch">Scrivimi</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>&copy; 2026 Gregorio Pellegrini</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:gregorio.pellegrini@gmail.com">Email</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://huggingface.co/gr93vr" target="_blank" rel="noopener">HuggingFace</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
