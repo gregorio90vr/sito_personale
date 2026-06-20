@@ -3,85 +3,52 @@ let currentLang = 'it';
 
 function setLang(lang) {
   currentLang = lang;
-  // Update all simple text elements
+  // Simple text swaps
   document.querySelectorAll('[data-it]').forEach(el => {
     const val = el.getAttribute('data-' + lang);
     if (val !== null) el.textContent = val;
   });
-  // Update elements with HTML content
-  document.querySelectorAll('[data-it-html]').forEach(el => {
-    const val = el.getAttribute('data-' + lang + '-html');
-    if (val !== null) el.innerHTML = val;
-  });
-  // Toggle language-specific blocks
-  document.querySelectorAll('.lang-it').forEach(el => {
-    el.style.display = lang === 'it' ? '' : 'none';
-  });
-  document.querySelectorAll('.lang-en').forEach(el => {
-    el.style.display = lang === 'en' ? '' : 'none';
-  });
-  // Update toggle buttons
+  // Language-specific blocks
+  document.querySelectorAll('.lang-it').forEach(el => { el.style.display = lang === 'it' ? '' : 'none'; });
+  document.querySelectorAll('.lang-en').forEach(el => { el.style.display = lang === 'en' ? '' : 'none'; });
+  // Toggle buttons
   document.getElementById('btn-it').classList.toggle('active', lang === 'it');
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  // Update typing effect language
-  updateTypingLang(lang);
-  // Update html lang attribute
+  // Publications toggle label (respect expanded state)
+  updatePubToggleLabel();
   document.documentElement.lang = lang;
-  // Store preference
   localStorage.setItem('lang', lang);
 }
 
-/* ===== TYPING EFFECT ===== */
-const roles = {
-  it: ['Matematico', 'Risk Manager', 'Sviluppatore App', 'Speaker & Divulgatore', 'Appassionato di AI'],
-  en: ['Mathematician', 'Risk Manager', 'App Developer', 'Speaker & Educator', 'AI Enthusiast']
-};
-let typingIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typingTimeout = null;
-let currentRoles = roles.it;
-
-function updateTypingLang(lang) {
-  currentRoles = roles[lang];
-  typingIndex = 0;
-  charIndex = 0;
-  isDeleting = false;
-  clearTimeout(typingTimeout);
-  const el = document.getElementById('typed-text');
-  if (el) el.textContent = '';
-  typeEffect();
+/* ===== PUBLICATIONS TOGGLE ===== */
+function updatePubToggleLabel() {
+  const btn = document.getElementById('pub-toggle');
+  if (!btn) return;
+  const hidden = document.getElementById('pub-hidden');
+  const expanded = hidden.classList.contains('show');
+  const key = expanded ? 'data-hide-' : 'data-show-';
+  btn.textContent = btn.getAttribute(key + currentLang);
 }
 
-function typeEffect() {
-  const el = document.getElementById('typed-text');
-  if (!el) return;
-  const current = currentRoles[typingIndex % currentRoles.length];
-  if (isDeleting) {
-    el.textContent = current.substring(0, charIndex - 1);
-    charIndex--;
-  } else {
-    el.textContent = current.substring(0, charIndex + 1);
-    charIndex++;
-  }
-  let delay = isDeleting ? 60 : 100;
-  if (!isDeleting && charIndex === current.length) {
-    delay = 1800;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    typingIndex++;
-    delay = 400;
-  }
-  typingTimeout = setTimeout(typeEffect, delay);
+function initPubToggle() {
+  const btn = document.getElementById('pub-toggle');
+  const hidden = document.getElementById('pub-hidden');
+  if (!btn || !hidden) return;
+  btn.addEventListener('click', () => {
+    hidden.classList.toggle('show');
+    updatePubToggleLabel();
+    // Reveal hidden fade-in items immediately
+    hidden.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  });
+  updatePubToggleLabel();
 }
 
-/* ===== INTERSECTION OBSERVER (fade-in) ===== */
+/* ===== FADE IN ON SCROLL ===== */
 function initFadeIn() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        setTimeout(() => entry.target.classList.add('visible'), i * 70);
         observer.unobserve(entry.target);
       }
     });
@@ -89,7 +56,7 @@ function initFadeIn() {
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 }
 
-/* ===== ACTIVE NAV ON SCROLL ===== */
+/* ===== ACTIVE NAV ===== */
 function initActiveNav() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -101,7 +68,7 @@ function initActiveNav() {
         if (active) active.classList.add('active');
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.35 });
   sections.forEach(s => observer.observe(s));
 }
 
@@ -119,13 +86,11 @@ function initMobileMenu() {
   });
 }
 
-/* ===== NAVBAR SCROLL SHADOW ===== */
+/* ===== NAVBAR SHADOW ===== */
 function initNavbarScroll() {
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
-    navbar.style.boxShadow = window.scrollY > 20
-      ? '0 4px 20px rgba(0,0,0,0.4)'
-      : '';
+    navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,0.4)' : '';
   }, { passive: true });
 }
 
@@ -133,20 +98,14 @@ function initNavbarScroll() {
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'it';
 
-  // Language toggle buttons
   document.getElementById('btn-it').addEventListener('click', () => setLang('it'));
   document.getElementById('btn-en').addEventListener('click', () => setLang('en'));
 
-  // Initialize
   initFadeIn();
   initActiveNav();
   initMobileMenu();
   initNavbarScroll();
-  typeEffect();
+  initPubToggle();
 
-  // Apply saved language (after typing starts)
-  if (savedLang !== 'it') setTimeout(() => setLang(savedLang), 100);
-  else {
-    document.getElementById('btn-it').classList.add('active');
-  }
+  if (savedLang !== 'it') setLang(savedLang);
 });
