@@ -113,6 +113,29 @@ function initNavbarScroll() {
   }, { passive: true });
 }
 
+/* ===== IMAGE LAZY LOADING & LIGHTBOX ===== */
+function initGalleryLightbox() {
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', () => {
+      const fullSrc = img.dataset.full || img.src;
+      showLightbox(fullSrc, img.alt);
+    });
+  });
+}
+
+function showLightbox(src, alt) {
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox active';
+  lightbox.innerHTML = `
+    <div class="lightbox-overlay" onclick="this.parentElement.remove()"></div>
+    <div class="lightbox-content">
+      <img src="${src}" alt="${alt}" />
+      <button class="lightbox-close" onclick="this.parentElement.parentElement.remove()">✕</button>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+}
+
 /* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('lang') || 'it';
@@ -126,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initPubToggle();
   initSmoothScroll();
+  initGalleryLightbox();
 
   if (savedLang !== 'it') setLang(savedLang);
 });
