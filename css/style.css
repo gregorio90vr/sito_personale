@@ -653,6 +653,12 @@ a.pub-item:hover { border-color: rgba(0,212,255,0.35); transform: translateX(4px
 .gallery-item:hover .gallery-img.rotate-90-cw {
   transform: rotate(90deg) scale(1.05);
 }
+.gallery-img.rotate-90-ccw {
+  transform: rotate(-90deg);
+}
+.gallery-item:hover .gallery-img.rotate-90-ccw {
+  transform: rotate(-90deg) scale(1.05);
+}
 .gallery-img.rotate-180 {
   transform: rotate(180deg);
 }
@@ -753,6 +759,9 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.
 }
 .lightbox-content img.rotate-90-cw {
   transform: rotate(90deg);
+}
+.lightbox-content img.rotate-90-ccw {
+  transform: rotate(-90deg);
 }
 .lightbox-content img.rotate-180 {
   transform: rotate(180deg);

@@ -142,6 +142,7 @@ function showLightbox() {
   let rotationClass = '';
   if (img.classes) {
     if (img.classes.includes('rotate-90-cw')) rotationClass = 'rotate-90-cw';
+    else if (img.classes.includes('rotate-90-ccw')) rotationClass = 'rotate-90-ccw';
     else if (img.classes.includes('rotate-180')) rotationClass = 'rotate-180';
   }
 
