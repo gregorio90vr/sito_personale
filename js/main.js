@@ -125,7 +125,8 @@ function initGalleryLightbox() {
       const galleryItems = [...section.querySelectorAll('.gallery-img')];
       currentLightboxGallery = galleryItems.map(i => ({
         src: i.dataset.full || i.src,
-        alt: i.alt
+        alt: i.alt,
+        classes: i.className
       }));
       currentImageIndex = galleryItems.indexOf(img);
       showLightbox();
@@ -138,6 +139,12 @@ function showLightbox() {
   const isFirst = currentImageIndex === 0;
   const isLast = currentImageIndex === currentLightboxGallery.length - 1;
 
+  let rotationClass = '';
+  if (img.classes) {
+    if (img.classes.includes('rotate-90-cw')) rotationClass = 'rotate-90-cw';
+    else if (img.classes.includes('rotate-180')) rotationClass = 'rotate-180';
+  }
+
   let lightbox = document.getElementById('lightbox-modal');
   if (!lightbox) {
     lightbox = document.createElement('div');
@@ -149,7 +156,7 @@ function showLightbox() {
   lightbox.innerHTML = `
     <div class="lightbox-overlay" onclick="closeLightbox()"></div>
     <div class="lightbox-content">
-      <img src="${img.src}" alt="${img.alt}" />
+      <img src="${img.src}" alt="${img.alt}" class="${rotationClass}" />
       <button class="lightbox-close" onclick="closeLightbox()">✕</button>
       <button class="lightbox-nav lightbox-prev ${isFirst ? 'disabled' : ''}"
               onclick="${isFirst ? '' : 'prevImage()'}" ${isFirst ? 'disabled' : ''}>‹</button>
