@@ -114,27 +114,83 @@ function initNavbarScroll() {
 }
 
 /* ===== IMAGE LAZY LOADING & LIGHTBOX ===== */
+let currentLightboxGallery = [];
+let currentImageIndex = 0;
+
 function initGalleryLightbox() {
-  document.querySelectorAll('.gallery-img').forEach(img => {
+  document.querySelectorAll('.gallery-img').forEach((img, idx) => {
+    img.style.cursor = 'pointer';
     img.addEventListener('click', () => {
-      const fullSrc = img.dataset.full || img.src;
-      showLightbox(fullSrc, img.alt);
+      const section = img.closest('.experience-section');
+      const galleryItems = [...section.querySelectorAll('.gallery-img')];
+      currentLightboxGallery = galleryItems.map(i => ({
+        src: i.dataset.full || i.src,
+        alt: i.alt
+      }));
+      currentImageIndex = galleryItems.indexOf(img);
+      showLightbox();
     });
   });
 }
 
-function showLightbox(src, alt) {
-  const lightbox = document.createElement('div');
-  lightbox.className = 'lightbox active';
+function showLightbox() {
+  const img = currentLightboxGallery[currentImageIndex];
+  const isFirst = currentImageIndex === 0;
+  const isLast = currentImageIndex === currentLightboxGallery.length - 1;
+
+  let lightbox = document.getElementById('lightbox-modal');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'lightbox-modal';
+    lightbox.className = 'lightbox';
+    document.body.appendChild(lightbox);
+  }
+
   lightbox.innerHTML = `
-    <div class="lightbox-overlay" onclick="this.parentElement.remove()"></div>
+    <div class="lightbox-overlay" onclick="closeLightbox()"></div>
     <div class="lightbox-content">
-      <img src="${src}" alt="${alt}" />
-      <button class="lightbox-close" onclick="this.parentElement.parentElement.remove()">✕</button>
+      <img src="${img.src}" alt="${img.alt}" />
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <button class="lightbox-nav lightbox-prev ${isFirst ? 'disabled' : ''}"
+              onclick="${isFirst ? '' : 'prevImage()'}" ${isFirst ? 'disabled' : ''}>‹</button>
+      <button class="lightbox-nav lightbox-next ${isLast ? 'disabled' : ''}"
+              onclick="${isLast ? '' : 'nextImage()'}" ${isLast ? 'disabled' : ''}>›</button>
+      <div class="lightbox-counter">${currentImageIndex + 1} / ${currentLightboxGallery.length}</div>
     </div>
   `;
-  document.body.appendChild(lightbox);
+  lightbox.classList.add('active');
 }
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox-modal');
+  if (lightbox) {
+    lightbox.classList.remove('active');
+  }
+}
+
+function prevImage() {
+  if (currentImageIndex > 0) {
+    currentImageIndex--;
+    showLightbox();
+  }
+}
+
+function nextImage() {
+  if (currentImageIndex < currentLightboxGallery.length - 1) {
+    currentImageIndex++;
+    showLightbox();
+  }
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const lightbox = document.getElementById('lightbox-modal');
+  if (lightbox && lightbox.classList.contains('active')) {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  }
+});
 
 /* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded', () => {
