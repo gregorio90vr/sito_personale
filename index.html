@@ -23,12 +23,8 @@
 
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#about" data-it="Chi sono" data-en="About">Chi sono</a></li>
-        <li><a href="#studies" data-it="Studi" data-en="Studies">Studi</a></li>
         <li><a href="#path" data-it="Percorso" data-en="Path">Percorso</a></li>
-        <li><a href="#speaking" data-it="Speaker" data-en="Speaking">Speaker</a></li>
         <li><a href="#projects" data-it="Progetti" data-en="Projects">Progetti</a></li>
-        <li><a href="#publications" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</a></li>
-        <li><a href="#adventures" data-it="Avventure" data-en="Adventures">Avventure</a></li>
         <li><a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a></li>
       </ul>
 
@@ -62,8 +58,8 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               <span data-it="Scarica il CV" data-en="Download CV">Scarica il CV</span>
             </a>
-            <a href="#projects" class="btn btn-outline">
-              <span data-it="Vedi i progetti" data-en="View projects">Vedi i progetti</span>
+            <a href="#about" class="btn btn-outline">
+              <span data-it="Chi sono" data-en="About me">Chi sono</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
@@ -80,26 +76,9 @@
       </div>
     </div>
 
-    <!-- Highlights strip -->
-    <div class="container">
-      <div class="highlights fade-in">
-        <a href="#path" class="highlight">
-          <div class="highlight-num">10+</div>
-          <div class="highlight-label" data-it="Anni nel Risk Management" data-en="Years in Risk Management">Anni nel Risk Management</div>
-        </a>
-        <a href="#publications" class="highlight">
-          <div class="highlight-num">7</div>
-          <div class="highlight-label" data-it="Pubblicazioni scientifiche" data-en="Scientific publications">Pubblicazioni scientifiche</div>
-        </a>
-        <a href="#path" class="highlight">
-          <div class="highlight-num">110<span class="highlight-sub">e lode</span></div>
-          <div class="highlight-label" data-it="Laurea in Matematica" data-en="MSc in Mathematics">Laurea in Matematica</div>
-        </a>
-        <a href="#path" class="highlight">
-          <div class="highlight-num">5+</div>
-          <div class="highlight-label" data-it="Seminari come speaker" data-en="Talks as speaker">Seminari come speaker</div>
-        </a>
-      </div>
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
@@ -117,6 +96,8 @@
         <p class="lang-it">
           Fuori dall'ufficio la matematica continua: ho pubblicato articoli scientifici, tenuto seminari nelle università
           e sviluppato <strong>app di intelligenza artificiale</strong> — perché la tecnologia deve risolvere problemi concreti.
+          La mia formazione spazia dalle <strong>geometrie non euclidee</strong> alla <strong>finanza sostenibile</strong> (Master EMIF, MIB Trieste):
+          temi distanti sulla carta, accomunati dalla stessa curiosità — capire come il pensiero evolve quando sfida i paradigmi consolidati.
         </p>
         <p class="lang-en" style="display:none">
           I'm a <strong>mathematician</strong> who found his calling at the intersection of numbers and reality.
@@ -127,7 +108,32 @@
         <p class="lang-en" style="display:none">
           Beyond the office, mathematics continues: I've published academic papers, given university talks,
           and built <strong>AI applications</strong> — because technology should solve concrete problems.
+          My background spans <strong>non-Euclidean geometries</strong> to <strong>sustainable finance</strong> (EMIF Master, MIB Trieste):
+          seemingly distant fields united by the same curiosity — understanding how thought evolves when it challenges established paradigms.
         </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card-num">10+</div>
+          <div class="stat-card-label lang-it">anni nel Risk Management</div>
+          <div class="stat-card-label lang-en" style="display:none">years in Risk Management</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num">7</div>
+          <div class="stat-card-label lang-it">pubblicazioni scientifiche</div>
+          <div class="stat-card-label lang-en" style="display:none">scientific publications</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num">110<span class="stat-card-sub lang-it">e lode</span><span class="stat-card-sub lang-en" style="display:none">cum laude</span></div>
+          <div class="stat-card-label lang-it">Laurea in Matematica</div>
+          <div class="stat-card-label lang-en" style="display:none">MSc in Mathematics</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-num">5+</div>
+          <div class="stat-card-label lang-it">seminari come speaker</div>
+          <div class="stat-card-label lang-en" style="display:none">talks as speaker</div>
+        </div>
       </div>
 
       <div class="chips fade-in" aria-label="Aree di interesse">
@@ -140,42 +146,7 @@
     </div>
   </section>
 
-  <!-- ===== STUDIES & INTERESTS ===== -->
-  <section id="studies" class="section">
-    <div class="container container-narrow">
-      <h2 class="section-title fade-in" data-it="Studi & Interessi" data-en="Studies & Interests">Studi & Interessi</h2>
-
-      <div class="studies-narrative fade-in">
-        <p class="lang-it">
-          La mia formazione riflette una passione costante per come il <strong>pensiero umano evolve quando sfida i paradigmi consolidati</strong>.
-        </p>
-        <p class="lang-en" style="display:none">
-          My education reflects an enduring passion for how <strong>human thought evolves when it challenges established paradigms</strong>.
-        </p>
-
-        <h3 class="studies-subheading lang-it">Geometrie non euclidee e il contesto culturale</h3>
-        <h3 class="studies-subheading lang-en" style="display:none">Non-Euclidean Geometries and Cultural Context</h3>
-        <p class="lang-it">
-          Nelle scuole superiori, ho approfondito come le <strong>geometrie non euclidee</strong> emersero nel XIX secolo non per scoperta empirica, ma per <strong>libertà concettuale</strong>. Quando matematici come Lobacevskij e Gauss osarono negare il V postulato di Euclide (dogma per quasi 2000 anni), scoprirono sistemi logicamente coerenti ma radicalmente diversi. Questo lavoro m'ha insegnato che <strong>il contesto culturale e intellettuale</strong> — il Romanticismo, l'Idealismo tedesco — non è sfondo ma <strong>catalizzatore del progresso scientifico</strong>.
-        </p>
-        <p class="lang-en" style="display:none">
-          In secondary school, I explored how <strong>non-Euclidean geometries</strong> emerged in the 19th century not through empirical discovery, but through <strong>conceptual freedom</strong>. When mathematicians like Lobachevsky and Gauss dared to negate Euclid's fifth postulate (a dogma for nearly 2000 years), they discovered logically coherent yet radically different systems. This work taught me that <strong>cultural and intellectual context</strong>—Romanticism, German Idealism—is not backdrop but <strong>catalyst for scientific progress</strong>.
-        </p>
-
-        <h3 class="studies-subheading lang-it">Finanza sostenibile: il nuovo paradigma economico</h3>
-        <h3 class="studies-subheading lang-en" style="display:none">Sustainable Finance: The New Economic Paradigm</h3>
-        <p class="lang-it">
-          Nel Master EMIF in <strong>Finanza Sostenibile</strong>, ho trovato un'eco di questa dinamica. La transizione verso economie a basso carbonio richiede lo stesso tipo di <strong>"libertà immaginativa"</strong>: mettere in discussione il paradigma estrattivista della finanza tradizionale e costruire framework alternativi (ESG, tassonomia europea, investimenti sostenibili) basati su criteri diversi. La tesi approfondisce come il framework normativo europeo (Green Deal, SFDR, CSDR, NFDR) traduce questa evoluzione concettuale in strumenti operativi: rating ESG, KPI climatici, metriche di rischio socio-ambientale.
-        </p>
-        <p class="lang-en" style="display:none">
-          In the <strong>Sustainable Finance</strong> EMIF Master's, I found an echo of this dynamic. The transition to low-carbon economies requires the same kind of <strong>"imaginative freedom"</strong>: questioning the extractive paradigm of traditional finance and building alternative frameworks (ESG, European taxonomy, sustainable investments) based on different criteria. The thesis explores how Europe's regulatory framework (Green Deal, SFDR, CSDR, NFDR) translates this conceptual evolution into operational tools: ESG ratings, climate KPIs, socio-environmental risk metrics.
-        </p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PATH (Experience + Education) ===== -->
+  <!-- ===== PATH (Experience + Education + Speaking) ===== -->
   <section id="path" class="section section-alt">
     <div class="container">
       <h2 class="section-title fade-in" data-it="Il mio percorso" data-en="My path">Il mio percorso</h2>
@@ -249,120 +220,54 @@
 
       </div>
 
-
-    </div>
-  </section>
-
-  <!-- ===== SPEAKING ===== -->
-  <section id="speaking" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title fade-in" data-it="Speaker &amp; Conferenze" data-en="Speaking &amp; Conferences">Speaker &amp; Conferenze</h2>
-      <p class="section-intro fade-in lang-it">Seminari, talk e presentazioni su matematica, risk management e finanza sostenibile.</p>
-      <p class="section-intro fade-in lang-en" style="display:none">Seminars, talks and presentations on mathematics, risk management and sustainable finance.</p>
-
-      <div class="speaking-grid">
-
-        <!-- 2026 -->
-        <div class="speaking-card fade-in">
-          <div class="speaking-year-badge">2026</div>
-          <h3 class="speaking-title lang-it">"Studiare Matematica, Lavorare con la Realtà"</h3>
-          <h3 class="speaking-title lang-en" style="display:none">"Studying Mathematics, Working with Reality"</h3>
-          <div class="speaking-venue">Università di Verona</div>
-          <p class="speaking-desc lang-it">
-            Riflessioni su come la formazione matematica rigorosa diventa strumento concreto nel risk management e nella pratica professionale. Dalla teoria alla pratica: il percorso di un matematico.
-          </p>
-          <p class="speaking-desc lang-en" style="display:none">
-            Reflections on how rigorous mathematical training becomes a concrete tool in risk management and professional practice. From theory to practice: a mathematician's journey.
-          </p>
-        </div>
-
-        <!-- 2024 -->
-        <div class="speaking-card fade-in">
-          <div class="speaking-year-badge">2024</div>
-          <h3 class="speaking-title lang-it">"Finanza Sostenibile: dalla Tassonomia ai Rischi Climatici"</h3>
-          <h3 class="speaking-title lang-en" style="display:none">"Sustainable Finance: from Taxonomy to Climate Risks"</h3>
-          <div class="speaking-venue">MIB Trieste School of Management</div>
-          <p class="speaking-desc lang-it">
-            Analisi del framework normativo europeo per la sostenibilità: come la tassonomia EU, l'SFDR e i criteri tecnici di vaglio trasformano il modo di valutare il rischio climatico. Applicazioni pratiche nei modelli di rating ESG.
-          </p>
-          <p class="speaking-desc lang-en" style="display:none">
-            Analysis of the European regulatory framework for sustainability: how the EU taxonomy, SFDR and technical screening criteria transform the way climate risk is assessed. Practical applications in ESG rating models.
-          </p>
-        </div>
-
-        <!-- 2021 -->
-        <div class="speaking-card fade-in">
-          <div class="speaking-year-badge">2021</div>
-          <h3 class="speaking-title">"Modeling Risk in Insurance and Energy Market"</h3>
-          <div class="speaking-venue lang-it">VTM7, Alumni Matematica Verona</div>
-          <div class="speaking-venue lang-en" style="display:none">VTM7, Alumni Matematica Verona</div>
-          <p class="speaking-desc lang-it">
-            Metodologie quantitative per il risk modeling in due settori critici: assicurazioni e mercati energetici. Applicazioni di Polynomial Chaos Expansion e tecniche di uncertainty quantification.
-          </p>
-          <p class="speaking-desc lang-en" style="display:none">
-            Quantitative methodologies for risk modeling in two critical sectors: insurance and energy markets. Applications of Polynomial Chaos Expansion and uncertainty quantification techniques.
-          </p>
-          <div class="speaking-links">
-            <a href="https://www.almathverona.it/seminars/vtm7_risk_insurance_energy_markets/" target="_blank" rel="noopener" class="speaking-link">
-              <span data-it="Pagina evento" data-en="Event page">Pagina evento</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <a href="https://univr.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1bdbb12e-7178-48d1-95ff-ad2601574884" target="_blank" rel="noopener" class="speaking-link">
-              <span>▶ <span data-it="Video" data-en="Video">Video</span></span>
-            </a>
+      <!-- Speaking compact -->
+      <div class="speaking fade-in">
+        <h3 class="path-heading" data-it="Speaker &amp; Conferenze" data-en="Speaking &amp; Conferences">Speaker &amp; Conferenze</h3>
+        <div class="speaking-list">
+          <div class="speaking-item">
+            <span class="speaking-year">2026</span>
+            <span class="speaking-text lang-it">"Studiare Matematica, Lavorare con la Realtà" — Università di Verona</span>
+            <span class="speaking-text lang-en" style="display:none">"Studying Mathematics, Working with Reality" — University of Verona</span>
+          </div>
+          <div class="speaking-item">
+            <span class="speaking-year">2024</span>
+            <span class="speaking-text lang-it">"Finanza Sostenibile: dalla Tassonomia ai Rischi Climatici" — MIB Trieste</span>
+            <span class="speaking-text lang-en" style="display:none">"Sustainable Finance: from Taxonomy to Climate Risks" — MIB Trieste</span>
+          </div>
+          <div class="speaking-item">
+            <span class="speaking-year">2021</span>
+            <span class="speaking-text">
+              <span data-it=""Modeling Risk in Insurance and Energy Market" — VTM7, Alumni Matematica Verona" data-en=""Modeling Risk in Insurance and Energy Market" — VTM7, Alumni Matematica Verona">"Modeling Risk in Insurance and Energy Market" — VTM7, Alumni Matematica Verona</span>
+              <a href="https://www.almathverona.it/seminars/vtm7_risk_insurance_energy_markets/" target="_blank" rel="noopener" class="inline-link"><span data-it="pagina" data-en="page">pagina</span></a>
+              <a href="https://univr.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1bdbb12e-7178-48d1-95ff-ad2601574884" target="_blank" rel="noopener" class="inline-link">▶ <span data-it="video" data-en="video">video</span></a>
+            </span>
+          </div>
+          <div class="speaking-item">
+            <span class="speaking-year">2015</span>
+            <span class="speaking-text">
+              <span data-it="International CAE Conference — 🏆 Poster Award" data-en="International CAE Conference — 🏆 Poster Award">International CAE Conference — 🏆 Poster Award</span>
+              <a href="https://meeting2015.enginsoft.it/posteraward_winners.html" target="_blank" rel="noopener" class="inline-link"><span data-it="poster" data-en="poster">poster</span></a>
+            </span>
+          </div>
+          <div class="speaking-item">
+            <span class="speaking-year">2015</span>
+            <span class="speaking-text">
+              <span data-it="39th AMASES Meeting — Polynomial Chaos Expansion to interest rate models · Padova" data-en="39th AMASES Meeting — Polynomial Chaos Expansion to interest rate models · Padova">39th AMASES Meeting — Polynomial Chaos Expansion to interest rate models · Padova</span>
+              <a href="https://events.math.unipd.it/amases2015/" target="_blank" rel="noopener" class="inline-link"><span data-it="sito" data-en="site">sito</span></a>
+            </span>
           </div>
         </div>
-
-        <!-- 2015 CAE -->
-        <div class="speaking-card fade-in">
-          <div class="speaking-year-badge">2015</div>
-          <h3 class="speaking-title lang-it">"A Spectral Uncertainty Quantification Method to Transoceanic Tsunami Propagation"</h3>
-          <h3 class="speaking-title lang-en" style="display:none">"A Spectral Uncertainty Quantification Method to Transoceanic Tsunami Propagation"</h3>
-          <div class="speaking-venue">International CAE Conference · <span class="badge-award">🏆 Poster Award</span></div>
-          <p class="speaking-desc lang-it">
-            Applicazione dei metodi spettrali e Polynomial Chaos Expansion alla propagazione di tsunami. Metodologia di quantificazione dell'incertezza in simulazioni numeriche critiche per la protezione civile.
-          </p>
-          <p class="speaking-desc lang-en" style="display:none">
-            Application of spectral methods and Polynomial Chaos Expansion to tsunami propagation. Uncertainty quantification methodology in critical numerical simulations for civil protection.
-          </p>
-          <div class="speaking-links">
-            <a href="https://meeting2015.enginsoft.it/posteraward_winners.html" target="_blank" rel="noopener" class="speaking-link">
-              <span data-it="Poster premiato" data-en="Award-winning poster">Poster premiato</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- 2015 AMASES -->
-        <div class="speaking-card fade-in">
-          <div class="speaking-year-badge">2015</div>
-          <h3 class="speaking-title">"Polynomial Chaos Expansion Approach to Interest Rate Models"</h3>
-          <div class="speaking-venue lang-it">39th AMASES Annual Meeting · Padova</div>
-          <div class="speaking-venue lang-en" style="display:none">39th AMASES Annual Meeting · Padova</div>
-          <p class="speaking-desc lang-it">
-            Metodologie di espansione polinomiale per la modellazione stocastica di tassi di interesse. Applicazioni nel pricing di derivati e nella gestione del rischio di tasso.
-          </p>
-          <p class="speaking-desc lang-en" style="display:none">
-            Polynomial expansion methodologies for stochastic interest rate modeling. Applications in derivatives pricing and interest rate risk management.
-          </p>
-          <div class="speaking-links">
-            <a href="https://events.math.unipd.it/amases2015/" target="_blank" rel="noopener" class="speaking-link">
-              <span data-it="Sito conferenza" data-en="Conference website">Sito conferenza</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ===== PROJECTS + PUBLICATIONS ===== -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title fade-in" data-it="Progetti" data-en="Projects">Progetti</h2>
-      <p class="section-intro fade-in lang-it">App e collaborazioni dove la matematica incontra il codice.</p>
-      <p class="section-intro fade-in lang-en" style="display:none">Apps and collaborations where mathematics meets code.</p>
+      <h2 class="section-title fade-in" data-it="Progetti &amp; Pubblicazioni" data-en="Projects &amp; Publications">Progetti &amp; Pubblicazioni</h2>
+      <p class="section-intro fade-in lang-it">App, ricerca e collaborazioni dove la matematica incontra il codice.</p>
+      <p class="section-intro fade-in lang-en" style="display:none">Apps, research and collaborations where mathematics meets code.</p>
       <div class="projects-grid">
 
         <!-- fuel-explorer -->
@@ -431,16 +336,12 @@
         </div>
 
       </div>
-    </div>
-  </section>
 
-  <!-- ===== PUBLICATIONS ===== -->
-  <section id="publications" class="section section-alt">
-    <div class="container container-narrow">
-      <h2 class="section-title fade-in" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</h2>
-      <p class="section-intro fade-in lang-it">Ricerca su Polynomial Chaos Expansion e finanza matematica.</p>
-      <p class="section-intro fade-in lang-en" style="display:none">Research on Polynomial Chaos Expansion and mathematical finance.</p>
-
+      <!-- Publications inline -->
+      <div class="pub-block fade-in">
+        <h3 class="path-heading" data-it="Pubblicazioni" data-en="Publications">Pubblicazioni</h3>
+        <p class="pub-intro lang-it">Ricerca su Polynomial Chaos Expansion e finanza matematica.</p>
+        <p class="pub-intro lang-en" style="display:none">Research on Polynomial Chaos Expansion and mathematical finance.</p>
       <div class="pub-list fade-in">
         <a href="https://link.springer.com/article/10.1007%2Fs10203-019-00247-w" target="_blank" rel="noopener" class="pub-item">
           <div class="pub-content">
@@ -496,6 +397,7 @@
       <button id="pub-toggle" class="btn btn-outline pub-toggle fade-in"
               data-show-it="Mostra tutte (7)" data-show-en="Show all (7)"
               data-hide-it="Mostra meno" data-hide-en="Show less">Mostra tutte (7)</button>
+      </div><!-- /pub-block -->
     </div>
   </section>
 
